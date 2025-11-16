@@ -1,0 +1,22 @@
+OFF
+5 3 0
+Remove
+1 0 0
+Remove
+Remove
+0 1 1
+1 1 1
+1 0 1
+0 0 1
+Remove
+Remove
+Remove
+Remove
+Remove
+3 1 5 6
+Remove
+Remove
+Remove
+Remove
+3 6 5 4
+3 6 4 7
