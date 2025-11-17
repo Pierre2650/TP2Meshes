@@ -96,7 +96,6 @@ public class TP2Modelisation : MonoBehaviour
             Vector3 Normal = Vector3.Cross(A, B);
             trianglesNormals[i] = Normal.normalized;
 
-            //Debug.Log("normal = "+ Normal);
         }
 
 
