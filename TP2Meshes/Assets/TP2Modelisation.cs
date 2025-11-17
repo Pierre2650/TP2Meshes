@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -55,7 +56,7 @@ public class TP2Modelisation : MonoBehaviour
 
             parts = lines[lineIndex].Split(' ');
 
-            Vector3 aVertice = new Vector3(float.Parse(parts[0]), float.Parse(parts[1]), float.Parse(parts[2]));
+            Vector3 aVertice = new Vector3(float.Parse(parts[0],CultureInfo.InvariantCulture), float.Parse(parts[1], CultureInfo.InvariantCulture), float.Parse(parts[2], CultureInfo.InvariantCulture));
 
             if(Mathf.Abs(aVertice.x) > max) { max = Mathf.Abs(aVertice.x); }
             if ( Mathf.Abs(aVertice.y) > max) { max = Mathf.Abs(aVertice.y); }
@@ -251,7 +252,7 @@ public class TP2Modelisation : MonoBehaviour
             }
             else
             {
-                newFile[lineIndex] = v.x+" "+v.y+" "+v.z;
+                newFile[lineIndex] = v.x.ToString(CultureInfo.InvariantCulture)+" "+v.y.ToString(CultureInfo.InvariantCulture) + " "+v.z.ToString(CultureInfo.InvariantCulture);
                 lineIndex++;
 
                for(int y = 0; y < triangles.Count; y++ )
